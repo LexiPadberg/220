@@ -5,7 +5,6 @@ interest.py
 Problems: calculate the value of an investment after ten years
 
 Certification of Authenticity: I certify that this assignment is entirely my own work
-help received from Marcelo Cordova
 """
 
 
