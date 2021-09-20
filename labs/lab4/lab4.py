@@ -149,8 +149,6 @@ def pi2():
     print(math.pi - acc)
 
 
-
-
 def main():
     squares()
     rectangle()
