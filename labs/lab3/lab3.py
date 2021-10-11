@@ -35,7 +35,7 @@ def newton():
 def sequence():
    x = eval(input("enter number of terms "))
    for i in range(1, (x+1)):
-      print(1 + (i//2 * 2))
+      print(1 + (i//2 * 2))  # or (i + 1) % 2
 
 
 def pi():

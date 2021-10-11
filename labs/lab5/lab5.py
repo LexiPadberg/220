@@ -71,6 +71,7 @@ def color_shape():
     # create text instructions
     msg = "Enter color values between 0 - 255\nClick window to color shape"
     inst = Text(Point(win_width / 2, win_height - 20), msg)
+
     inst.draw(win)
 
     # create circle in window's center
