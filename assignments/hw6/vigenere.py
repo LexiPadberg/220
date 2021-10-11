@@ -31,21 +31,17 @@ def main():
     encode = Text(Point(200, 230 ), "Encode")
     button.draw(win)
     encode.draw(win)
+    win.getMouse()
+
+    message1 = message1.getText()
+    keyword1 = keyword1.getText()
 
 
-
-    #   keyword1 = str(keyword1)
-    message1 = str(message1)
-    for ch in message1:
-        message1 = message1.replace(" ", "")
-        message1 = message1.upper()
-        print(ord(ch), end=" ")
-
-
-
-    result = encode.replace()
-    result.getMouse()
-
+    encrypted = code(message1, keyword1)
+    button.undraw()
+    encode.undraw()
+    result = Text(Point(200, 230), "Resulting Message\n" + encrypted)
+    result.draw(win)
 
     inst_pt = Point(200, 390)
     instructions = Text(inst_pt, "click again to quit")
@@ -55,39 +51,20 @@ def main():
     win.getMouse()
     win.close()
 
-
-
-
-def encrypt():
-    message = input("please enter the message to encode:")
-    message = message.replace(" ", "")
+def code(message, keyword):
+    acc = ""
     message = message.upper()
-    print(message)
- #   key = input("enter keyboard")
-    for character in message:
-      x = (ord(message))
-      print(x)
-
-
-   #     print(x, end=" ")
-
-
-def encode(message):    # will print out a bunch of numbers that represent how each letter is stored in the program
-    for s in message:
-       x = ord(s)
-       print(x, end=" ")
-
-def decode(message):
-    num_list = message.split()
-    acc = ' '
-    for num in num_list:   # s is a string, need to convert it to an integer (strings have the '' around them)
-        acc = acc + chr(eval(num))
-    print(acc)
-
-
-
-
-
+    keyword = keyword.upper()
+    message = message.replace(" ", "")
+    keyword = keyword.replace(" ", "")
+    for i in range(len(message)):
+        m = ord(message[i]) - 65
+        k = ord(keyword[i % len(keyword)]) - 65
+        nc = m + k
+        nc = nc % 26
+        nc = chr(65 + nc)
+        acc += nc
+    return acc
 
 if __name__ == '__main__':
     main()
