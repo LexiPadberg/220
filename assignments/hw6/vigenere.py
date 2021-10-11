@@ -1,8 +1,8 @@
 """
 Name: Lexi Padberg
-greeting.py
+vigeneere.py
 
-Problem: write a program that displays a heart
+Problem: write a program that uses the vigenere cipher
 
 Certification of Authenticity: I certify that this assignment is entirely my own work
 """
@@ -65,6 +65,7 @@ def code(message, keyword):
         nc = chr(65 + nc)
         acc += nc
     return acc
+
 
 if __name__ == '__main__':
     main()
