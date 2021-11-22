@@ -24,7 +24,7 @@ def read_data(filename):
 def is_in_linear(search_val, val):
     i = 0
     while i < len(val):
-        if i == search_val:
+        if val[i] == search_val:
             return True
         i += 1
         return False
@@ -68,6 +68,7 @@ def hi_lo_game():
 
 def main():
     good_input()
+    num_digits()
     hi_lo_game()
     pass
 
