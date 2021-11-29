@@ -47,3 +47,4 @@ class SalesPerson:
         if self.employee_id is not None and self.name is not None and \
                 self.total_sales() is not None:
             return str(self.employee_id) + "-" + self.name + ":" + str(self.total_sales())
+        return None
